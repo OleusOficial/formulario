@@ -1,6 +1,14 @@
 $def with (form)
-
-<form name="main" method="post"> 
-$if not form.valid: <p class="error">Información erronea</p>
-$:form.render()
-<input type="submit" />    </form>
+<div style="margin:auto;width:50%;text-align:center">
+    <h2>¿Puedo Votar?</h2>
+    <br>
+    <p style="text-align:justify" >¿Quieres saber si podrás votar en las proxima elecciones?
+       Excelente solo tienes que completar la siguiente Información
+       que se te solicita, y se te indicara si puede ejercer el derecho
+       al voto.        
+    </p>
+    <form name="main" method="post" > 
+    $if not form.valid: <p class="error">Información erronea</p>
+    $:form.render()
+    <input type="submit" />    </form>
+</div>
